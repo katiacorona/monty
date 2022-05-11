@@ -2,7 +2,7 @@
 
 Hello! And welcome to our Monty Bytecode Interpreter.
 
-## The Monty language :coconut:
+## :coconut: The Monty language
 
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (like Python does). The language relies on a unique stack, with specific instructions to manipulate.
 
@@ -43,9 +43,10 @@ $
       push    6        $
 $
 pall This is the end of our program. Monty is awesome!$
+vagrant:monty$
 ```
 
-## Installation :magic_wand:
+## :magic_wand: Installation
 
 To get started, create a new directory in your machine and clone the repository:
 
@@ -59,10 +60,10 @@ And compile:
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
 ```
 
-## Usage :arrow_forward:
+## :arrow_forward: Usage
 
 - `monty <file>`
-	- where `file` is the path to the file containing Monty byte code
+	- where `<file>` is the path to the file containing Monty byte code
 
 ### Opcode
 
