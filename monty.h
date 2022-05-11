@@ -36,6 +36,7 @@ typedef struct instruction_s
 
 /* Prototypes */
 
-void check_usage(int argc);
+void check_usage(int n);
+void script_error(char *filename);
 
 #endif /* MONTY_H */
