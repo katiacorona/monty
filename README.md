@@ -1,6 +1,6 @@
 # :snake: Monty Interpreter
 
-Hello! And welcome to out Monty Bytecode Interpreter.
+Hello! And welcome to our Monty Bytecode Interpreter.
 
 ## The Monty language :coconut:
 
@@ -24,25 +24,25 @@ pall$
 vagrant:monty$
 ```
 
-Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:
+Monty byte code files can contain blank lines (empty or made of spaces only), and any additional text after the opcode or its required argument is not taken into account:
 
 ```
 vagrant:monty$ cat -e bytecodes/001.m
-push 0 Push 0 onto the stack
-push 1 Push 1 onto the stack
-
-push 2
-  push 3
-                   pall    
-
-
-                           
-push 4
-
-    push 5    
-      push    6        
-
-pall This is the end of our program. Monty is awesome!
+push 0 Push 0 onto the stack$
+push 1 Push 1 onto the stack$
+$
+push 2$
+  push 3$
+                   pall    $
+$
+$
+                           $
+push 4$
+$
+    push 5    $
+      push    6        $
+$
+pall This is the end of our program. Monty is awesome!$
 ```
 
 ## Installation :magic_wand:
@@ -64,15 +64,16 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
 ```
 monty file
 ```
-	Were `file` is the path to the file containing Monty byte code.
+	- where `file` is the path to the file containing Monty byte code.
 
 ### Opcode Usage:
 
 - `push <int>`
-	Where <int> is an integer.
+	- pushes an element to the stack
+	- where <int> is an integer
 	
 - `pall`
-	Prints all the values on the stack, starting from the top of the stack.
+	- prints all the values on the stack, starting from the top of the stack
 
 ## Examples
 
