@@ -1,0 +1,19 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+test/
+*__/
+
+# ignore main files
+*main.c
+a
+b
+c
+d
+e
+h
+i
+j
+k
