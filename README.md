@@ -61,16 +61,14 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
 
 ## Usage :arrow_forward:
 
-```
-monty file
-```
-	- where `file` is the path to the file containing Monty byte code.
+- `monty <file>`
+	- where `file` is the path to the file containing Monty byte code
 
-### Opcode Usage:
+### Opcode
 
 - `push <int>`
 	- pushes an element to the stack
-	- where <int> is an integer
+	- where `<int>` is an integer
 	
 - `pall`
 	- prints all the values on the stack, starting from the top of the stack
