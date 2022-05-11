@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void error_usage(int argc);
+#define UNUSED(x) (void)(x)
 
 /**
  * main - Entry Point. The very first version of Monty.
@@ -11,13 +11,16 @@ void error_usage(int argc);
  */
 int main(int argc, char **argv)
 {
+	UNUSED(argv);
+
+	check_usage(argc);
 	return (0);
 }
 
 /**
  * error_usage - Print an usage error if the number of arguments is != 2.
  */
-void error_usage(int argc)
+void check_usage(int argc)
 {
 	if (argc != 2)
 	{

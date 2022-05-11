@@ -36,4 +36,6 @@ typedef struct instruction_s
 
 /* Prototypes */
 
+void check_usage(int argc);
+
 #endif /* MONTY_H */
