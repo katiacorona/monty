@@ -34,16 +34,16 @@ int main(int argc, char **argv)
  */
 void read_script(FILE *scr)
 {
-        size_t line_len = 0;
-        char *line = NULL;
-        unsigned int line_number = 0;
+	size_t line_len = 0;
+	char *line = NULL;
+	unsigned int line_number = 0;
 
 	while (getline(&line, &line_len, scr) != -1)
 	{
-        	line_number++;
-        	printf("Line: %s", line);
-        	create_tokens(line, " ");
-        	printf("Line: %u\n", line_number++);
+		line_number++;
+		printf("Line: %s", line);
+		create_tokens(line, " ");
+		printf("Line: %u\n", line_number++);
 	}
 }
 
