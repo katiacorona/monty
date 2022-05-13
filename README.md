@@ -48,13 +48,13 @@ vagrant:monty$
 
 ## :magic_wand: Installation
 
-To get started, create a new directory in your machine and clone the repository:
+Get started by cloning the repository:
 
 ```
 $ git clone https://github.com/katiacorona/monty.git
 ```
 
-And compile:
+:nerd_face: Compile:
 
 ```
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
@@ -74,7 +74,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o monty
 - `pall`
 	- prints all the values on the stack, starting from the top of the stack
 
-## Examples
+## :technologist: Examples
 
 ```
 vagrant:monty$ cat -e bytecodes/00.m
