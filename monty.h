@@ -2,10 +2,11 @@
 #define MONTY_H
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #define UNUSED(x) (void)(x)
 #define DELIM " \n\t"
+
+/* Shared variables */
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -42,7 +43,7 @@ typedef struct instruction_s
 void check_usage(int n);
 void script_error(char *scriptname);
 void read_script(FILE *scr);
-char *create_tokens(char *s, char *delim);
+void get_instruction(char *l, unsigned int line_number);
 /* void (*get_opcode_func(char *opcode))(stack_t ****, unsigned int ****); */
 
 #endif /* MONTY_H */

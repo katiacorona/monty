@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	/* 01 - Read Monty script */
 	read_script(script);
 
-	/* Close script and finalize */
+	/* 02 - Close script and finalize */
 	fclose(script);
 	return (0);
 }

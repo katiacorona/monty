@@ -11,38 +11,37 @@ void read_script(FILE *scr)
 {
 	size_t line_len = 0;
 	char *line = NULL;
-	unsigned int line_number = 0;
+	unsigned int line_number = 1;
 
 	while (getline(&line, &line_len, scr) != -1)
 	{
+		printf("Line #%i: %s", line_number, line);
+		get_instruction(line, line_number);
 		line_number++;
-		printf("Line: %s", line);
-		create_tokens(line, " ");
-		printf("Line: %u\n", line_number++);
 	}
 }
 
 /**
- * create_tokens - Takes a line as input and separates it into words.
- * @s: A pointer to the string to be tokenized.
- * @delim: The delimiter character.
+ * get_instruction - Takes a line as input and separates it into words.
+ * @l: A pointer to the line to be tokenized.
+ * @line_number: The number of the line to be tokenized.
  * Return: A 2D array of pointers to the newly created tokens.
  */
-char *create_tokens(char *s, char *delim)
+void get_instruction(char *l, unsigned int line_number)
 {
-	int buflen = 64;
-	char *token = NULL;
+	char *instruction, *n;
+	int i = 0;
+	UNUSED(line_number);
 
-	if (s == NULL)
-		return (NULL);
-
-	token = malloc(buflen * sizeof(char));
-	if (!token)
+	instruction = strtok(l, " ");
+	if (strcmp(instruction, "push") == 0)
+		n = strtok(NULL, "\n");
+	else
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		while (instruction[i] != '\n')
+			i++;
+                instruction[i] = '\0';
+		n = "none";
 	}
-	token = strtok(s, delim);
-	printf("Token: %s, Len: %lu\n", token, strlen(token));
-	return (token);
+	printf("Opcode: %s(%lu) / Opcode->n: %s(%lu)\n", instruction, strlen(instruction), n, strlen(n));
 }
